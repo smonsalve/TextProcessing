@@ -1,3 +1,4 @@
+#class Interactiva
 require "charlock_holmes/string"
 
 def metodo1
@@ -18,26 +19,26 @@ end
 #$; = /\s\s/ 
 
 def met_strm
+	materias = Hash.new(0)
 	n = 100
 	File.open("100.txt") do |file|
 		file.each_line do |line|
 			if n>0
-				#puts line.detect_encoding
-				#puts line.chomp.split
-				categorize(line)
+				line.split.each do |word|
+					if word.match(/[A-Z][A-Z]\d{4}/)
+						materias[word] += 1
+					end
+				end
 				n -= 1
 			end
 		end	
 	end
+	puts materias.inspect
 end	
 
 
-def categorize(line)
-	line.split.each do |word|
-		if word.match(/[A-Z][A-Z]\d{4}/)
-			puts word
-		end
-	end
-end
 
 met_strm
+
+#end
+
