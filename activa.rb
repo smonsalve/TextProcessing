@@ -85,18 +85,18 @@ def met
 					ifechas += 1
 					fechas[fecha] = ifechas					
 				end	
-				print(fechas[fecha].to_s + ",")
+				print(fechas[fecha].to_s)
 				
 				puts
 			end
 		end
-		puts materias.inspect
-		puts codigos.inspect
-		puts semestres.inspect
-		puts nombres.inspect
-		puts func.inspect
-		puts ingresos.inspect
-		puts fechas.inspect
+		# puts materias.inspect
+		# puts codigos.inspect
+		# puts semestres.inspect
+		# puts nombres.inspect
+		# puts func.inspect
+		# puts ingresos.inspect
+		# puts fechas.inspect
 	end	
 end	
 
