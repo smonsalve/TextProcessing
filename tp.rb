@@ -1,4 +1,4 @@
-require "charlock_holmes/string"
+#require "charlock_holmes/string"
 
 def metodo1
 	File.open("100.txt") do |file|
@@ -18,15 +18,15 @@ end
 #$; = /\s\s/ 
 
 def met_strm
-	n = 100
-	File.open("100.txt") do |file|
+	#n = 100
+	File.open("incidente.csv") do |file|
+	#File.open("100.txt") do |file|
 		file.each_line do |line|
-			if n>0
+			#if n>0
 				#puts line.detect_encoding
 				#puts line.chomp.split
 				categorize(line)
-				n -= 1
-			end
+	#			n -= 1
 		end	
 	end
 end	
