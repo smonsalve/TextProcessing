@@ -15,6 +15,7 @@ def met
 	iingresos = 0
 	ifechas = 0
 
+<<<<<<< HEAD
 	#File.open("input/incidente.csv") do |file|
 	File.open("input/test1.txt") do |file|
 	
@@ -27,6 +28,16 @@ def met
 				palabra = l[n]
 
 				while !(palabra.match(/[A-Z][A-Z]\d{4}/) || palabra == "GEMEIP"  || palabra == "CVCERLALC42" || palabra == "ORI" || palabra == "RSI")
+=======
+	File.open("100.txt") do |file|
+		file.each_line do |line|
+			l = line.split
+			if !(line.include?('-----') || l[0]=="MATERIA")
+			 	materia = l[0]
+				n=1
+				palabra = l[n] 
+				while !palabra.match(/[A-Z][A-Z]\d{4}/)
+>>>>>>> 9a0d939a31b038820b7e06955ec9234a24ee2315
 					materia = materia + " " + palabra
 					n+=1
 					palabra = l[n]	
@@ -39,7 +50,11 @@ def met
 				end
 				n+=1
 				funcionalidad = l[l.length-3]
+<<<<<<< HEAD
 				ingreso = l[l.length-2] 	
+=======
+				ingreso = l[l.length-2]
+>>>>>>> 9a0d939a31b038820b7e06955ec9234a24ee2315
 				fecha = l[l.length-1]
 				palabra = l[n]
 				nombre = ""
